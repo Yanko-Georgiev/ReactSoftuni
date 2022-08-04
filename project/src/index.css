@@ -277,132 +277,65 @@ footer .lf {
   color: #9f9f9f;
   float: left;
 }
-#login-page {
+#login-page #register-page{
   position: relative;
-  width: 650px;
   height: auto;
-  border-radius: 20px;
-  padding: 40px;
+  border-radius: 10px;
+  padding: 30px;
   box-sizing: border-box;
-  background: #3e4443;
-  box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
-}
-
-#register-page {
-  position: relative;
-  width: 650px;
-  height: auto;
-  border-radius: 20px;
-  padding: 40px;
-  box-sizing: border-box;
-  background: #3e4443;
-  box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+  background: #f2a223;
 }
 
 .container {
-  padding: 40px;
-}
-
-.brand-logo {
-  height: 100px;
-  width: 100px;
-  margin: auto;
-  border-radius: 50%;
-  box-sizing: border-box;
-  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+  margin: 30px 0 30px 33%;
 }
 
 .container>h1 {
   margin-top: 15px;
-  font-weight: 900;
-  font-size: 2.7rem;
-  text-align: center;
-  color: white;
-  letter-spacing: 1px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-bottom: 17px;
-}
-
-label,
-input {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 60px;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 20px;
 }
 
 label {
-  margin-bottom: 8px;
-  font-size: 27px;
-  color: white;
-  margin-top: 13px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-label:nth-of-type(2) {
-  margin-top: 20px;
-}
-
-input::placeholder {
-  color: rgba(184, 179, 179, 0.678);
-};
-
-
-label[for="female"] {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #fff;
   margin-top: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: block;
 }
-
-input[type="nickname"],
 input[type="password"],
-input[type="number"],
 input[type="email"] {
-  background: #ecf0f3;
-  padding: 30px;
-  padding-left: 20px;
-  height: 50px;
-  margin-top: 10px;
-  font-size: 24px;
-  border-radius: 50px;
-  box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+  background: #f2a223;
+  padding: 25px;
+  font-size: 25px;
+  border-radius: 15px;
+  color: #fff;
+  display: block;
+  width: 50%;
 }
 
-label[for="terms"]>input {
+.btn{
+  margin: 50px 2%;
+  background: #fff;
+  height: 60px;
+  border-radius: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #f2a223;
+  width: 23%;
   display: inline;
 }
 
-.btn.submit {
-  margin-top: 30px;
-  background: #778e9c;
-  height: 60px;
-  border-radius: 20px;
-  color: white;
-  font-size: 26px;
-  cursor: pointer;
-  font-weight: 900;
-  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
-  transition: 0.5s;
+.btn:hover{
+  color: #fff;
+  background-color: #f2a223;
 }
 
-.btn.submit:hover {
-  color: white;
-  background-color: #8fa9b9;
-}
 
-.container {
-  text-align: left;
-  margin-top: 0px;
-}
 
-.field>span {
-  position: absolute;
-  font-size: 18px;
-  bottom: 17px;
-  right: 8px;
-  text-decoration: none;
-  color: black;
-  background: rgb(235, 157, 142);
-  border-radius: 10px;
-  padding: 5px;
-}
+

@@ -17,7 +17,7 @@ export const Home=()=>{
                 <div className="movie-image">
                     <span className="name">SPIDER MAN 2</span>
                   <a href="#">
-                    <img src="images/movie2.jpg" alt="" />
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" />
                   </a>
                 </div>
                 <div className="rating">
@@ -34,7 +34,7 @@ export const Home=()=>{
                     <span className="name">VALKYRIE</span>
                   </span>
                   <a href="#">
-                    <img src="images/movie4.jpg" alt="" />
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" />
                   </a>
                 </div>
                 <div className="rating">
@@ -52,7 +52,7 @@ export const Home=()=>{
                     <span className="name">GLADIATOR</span>
                   </span>
                   <a href="#">
-                    <img src="./images/movie5.jpg" alt="" />
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" />
                   </a>
                 </div>
                 <div className="rating">

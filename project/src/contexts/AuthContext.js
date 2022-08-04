@@ -17,6 +17,7 @@ export const AuthProvider = ({
     };
 
     return (
+        
         <AuthContext.Provider value={{
             user: auth,
             userLogin,

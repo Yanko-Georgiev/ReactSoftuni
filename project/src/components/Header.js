@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useAuthContext } from '../contexts/AuthContext';
 
 export const Header=()=>{
+  const { user } = useAuthContext();
     return(
         <header>
           <h1 id="logo">
@@ -17,12 +19,10 @@ export const Header=()=>{
               <li>
                 <Link to="/coming">COMING SOON</Link>
               </li>
-              <li>
-                <Link to="/login">LOGIN</Link>
-              </li>
-              <li>
-                <Link to="/register">REGISTER</Link>
-              </li>
+              {user.email
+                    ? <li><Link to="/logout">LOGOUT</Link></li>
+                    : <li><Link to="/login">LOGIN</Link></li>
+                }
             </ul>
           </nav>
         </header>
