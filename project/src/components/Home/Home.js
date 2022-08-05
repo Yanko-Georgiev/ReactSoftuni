@@ -1,9 +1,14 @@
 
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
+
+import { useContext } from 'react';
+
+import { MovieContext } from '../../contexts/MovieContext'
+import { LatestMovies } from './LatestMovies';
 
 export const Home=()=>{
-
+    const { movies } = useContext(MovieContext)
     return(
     <>
         <Header/>
@@ -13,57 +18,7 @@ export const Home=()=>{
               <div className="head">
                 <h2>LATEST MOVIES</h2>
               </div>
-              <div className="movie">
-                <div className="movie-image">
-                    <span className="name">SPIDER MAN 2</span>
-                  <a href="#">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="rating">
-                  <p>RATING</p>
-                  <div className="stars">
-                    <div className="stars-in"> </div>
-                  </div>
-                </div>
-              </div>
-              <div className="movie">
-                <div className="movie-image">
-
-                  <span className="play">
-                    <span className="name">VALKYRIE</span>
-                  </span>
-                  <a href="#">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="rating">
-                  <p>RATING</p>
-                  <div className="stars">
-                    <div className="stars-in"> </div>
-                  </div>
-                  <span className="comments">12</span>
-                </div>
-              </div>
-              <div className="movie">
-                <div className="movie-image">
-
-                  <span className="play">
-                    <span className="name">GLADIATOR</span>
-                  </span>
-                  <a href="#">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="rating">
-                  <p>RATING</p>
-                  <div className="stars">
-                    <div className="stars-in"> </div>
-                  </div>
-                  <span className="comments">12</span>
-                </div>
-              </div>
-
+              {movies.map(movie => <LatestMovies key={movie._id} movie={movie} />)}
               <div className="cl">&nbsp;</div>
             </div>
           </div>

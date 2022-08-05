@@ -43,7 +43,6 @@ const Register = ({ auth }) => {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="maria@email.com"
                     />
                     <label htmlFor="pass">Password:</label>
                     <input type="password" name="password" id="register-password" />
