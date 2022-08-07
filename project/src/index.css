@@ -134,13 +134,14 @@ nav ul li {
 	display:inline;
 	padding-left:29px;
 }
-nav ul li a {
+nav .navlink {
 	font-size:14px;
 	font-weight:bold;
 	color:#fff;
 	text-decoration:none;
+	padding-left:29px;
 }
-nav ul li a.active, nav ul li a:hover {
+nav .navlink.active, nav .navlink:hover {
 	color:#d91d2a;
 }
 #main {
@@ -215,11 +216,6 @@ nav ul li a.active, nav ul li a:hover {
 	line-height:0;
 }
 
-.head {
-	width:50%;
-	padding-top:11px;
-	padding-bottom:14px;
-}
 #coming h3 {
 	float:left;
   display: block;
@@ -234,10 +230,15 @@ nav ul li a.active, nav ul li a:hover {
 	width:490px;
 	padding-top:11px;
 	padding-bottom:14px;
-  padding-left: 30px;
+  	padding-left: 30px;
 }
 .head strong {
 	color:#ff361a;
+}
+.head_catalog h2{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 24px;
 }
 #coming .content {
   width: 490px;
@@ -329,6 +330,7 @@ input[type="email"] {
   color: #f2a223;
   width: 23%;
   display: inline;
+  z-index: -1;
 }
 
 .btn:hover{
@@ -339,3 +341,81 @@ input[type="email"] {
 
 
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+
+
+
+.movie_card {
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 1000px;
+    margin: 80px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+    box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
+	background-color: #f2a223;
+	padding-bottom: 20px;
+}
+
+.movie_card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s;
+}
+
+.info_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+
+
+.info_section h1 {
+    color: black;
+    font-weight: 400;
+	text-align: center;
+	position: relative;
+	top: 25px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+
+.poster {
+	margin: 48px;
+	margin-bottom: 0px;
+    height: 800px;
+	width: 700px;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+
+
+.movie_social {
+	display: inline;
+}
+
+div.movie_social i:hover {
+	transition: color 0.3s;
+	color: #413e3e;
+}
+div.movie_social i{
+	margin-left: 10px;
+	font-size: 24px;
+	color: #fff;
+}
+ 
+i {
+	font-size: 19px;
+	cursor: pointer;
+}
+.details_btn{
+	margin-left: 40%;
+	margin-top: 25px;
+}

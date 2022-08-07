@@ -8,7 +8,7 @@ export const MovieContext = createContext();
 const movieReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_MOVIES':
-            return action.payload.map(x => ({ ...x, comments: [] }));
+            return action.payload.map(x => ({ ...x}));
         case 'ADD_MOVIE':
             return [...state, action.payload];
         case 'FETCH_MOVIE_DETAILS':

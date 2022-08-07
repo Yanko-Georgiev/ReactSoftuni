@@ -8,6 +8,7 @@ import { Home } from './components/Home/Home'
 import { AuthProvider} from './contexts/AuthContext'
 import { PrivateGuard } from './components/common/PrivateGuard'
 import { MovieProvider } from './contexts/MovieContext';
+import { Catalog } from './components/catalog/Catalog';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route element={<PrivateGuard />}>
                   <Route path="/logout" element={<Logout />} />
               </Route>
+              <Route path="/catalog" element={<Catalog />} />
             </Routes>
           </AuthProvider>
         </MovieProvider>

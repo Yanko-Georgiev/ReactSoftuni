@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-export const LatestMovies = ({movie}) =>{
+export const TopRatedMovies = ({movie}) =>{
     return(
         <div className="movie">
             <div className="movie-image">
                 <span className="name">{movie.title}</span>
-                <Link to={`/catalog/${movie._id}`}>
+                <Link to={`/details/${movie._id}`}>
                 <img src={movie.img} alt="" />
                 </Link>
             </div>
