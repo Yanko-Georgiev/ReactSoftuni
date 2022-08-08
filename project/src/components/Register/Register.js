@@ -4,12 +4,13 @@ import * as authService from "../../services/authService";
 import { withAuth } from "../../contexts/AuthContext";
 import { Header } from '../Header';
 import { Footer } from '../Footer';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
 const Register = ({ auth }) => {
     const navigate = useNavigate();
+    useEffect(()=>{document.getElementById('register').classList.add('active')},[])
 
     const onSubmit = (e) => {
         e.preventDefault();

@@ -1,15 +1,15 @@
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { useNavigate } from "react-router";
 
 import { Header } from "../Header";
 import { Footer } from "../Footer";
 import { AuthContext } from "../../contexts/AuthContext";
 import * as authService from "../../services/authService";
-import { Link } from "react-router-dom";
 
 export const Login = () => {
     const { userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
+    useEffect(()=>{document.getElementById('login').classList.add('active')},[])
 
     const onSubmit = (e) => {
         e.preventDefault();

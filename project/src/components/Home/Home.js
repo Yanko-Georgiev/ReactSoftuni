@@ -2,13 +2,15 @@
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
-import { useContext } from 'react';
+import { useContext,useEffect } from 'react';
 
 import { MovieContext } from '../../contexts/MovieContext'
 import { TopRatedMovies } from './TopRatedMovies';
 
 export const Home=()=>{
     const { movies } = useContext(MovieContext)
+    useEffect(()=>{document.getElementById('home').classList.add('active')},[])
+
     return(
     <>
         <Header/>

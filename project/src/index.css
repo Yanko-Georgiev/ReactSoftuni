@@ -73,7 +73,7 @@ header {
 }
 h1#logo {
 	margin: 10px;
-  margin-right: 500px;
+  margin-right: 450px;
   display: inline-block;
 }
 h1#logo a {
@@ -309,7 +309,9 @@ label {
   display: block;
 }
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+input[type="text"],
+textarea {
   background: #f2a223;
   padding: 25px;
   font-size: 25px;
@@ -317,6 +319,9 @@ input[type="email"] {
   color: #fff;
   display: block;
   width: 50%;
+}
+textarea{
+	height: 220px;
 }
 
 .btn{
@@ -418,4 +423,35 @@ i {
 .details_btn{
 	margin-left: 40%;
 	margin-top: 25px;
+}
+.details_card{
+	position: relative;
+	background:#f2a223;
+	width: 800px;
+	height: 400px;
+	border-radius: 15px;
+	margin: 100px auto;
+	padding: 10px;
+}
+.details_card img{
+	height: 400px;
+	width: 250px;
+	border-radius: 15px;
+	float: left;
+	margin-right: 20px;
+}
+.details_card h1{
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+}
+.details_card p{
+	color: #413e3e;
+	font-size: 24px;
+	margin: 10px;
+	text-align: justify;
+}
+.details_card .btn{
+	margin-left: 40px;
 }

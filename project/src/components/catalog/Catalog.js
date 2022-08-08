@@ -1,16 +1,18 @@
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
-import { useContext } from 'react';
+import { useContext,useEffect } from 'react';
 
 import { MovieContext } from '../../contexts/MovieContext'
 import { CatalogItem } from './CatalogItem';
 
 export const Catalog = () =>{
     const { movies } = useContext(MovieContext)
+    useEffect(()=>{document.getElementById('catalog').classList.add('active')},[])
     return(
         <>
         <Header/>
+        
             <div id="main">
                 <div id="content">
                     <div className="box">
