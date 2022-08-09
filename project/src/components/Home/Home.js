@@ -10,7 +10,8 @@ import { TopRatedMovies } from './TopRatedMovies';
 export const Home=()=>{
     const { movies } = useContext(MovieContext)
     useEffect(()=>{document.getElementById('home').classList.add('active')},[])
-
+    let moviesL=movies.length;
+    let newMovies=movies.slice(moviesL-3,moviesL)
     return(
     <>
         <Header/>
@@ -18,10 +19,10 @@ export const Home=()=>{
           <div id="content">
             <div className="box">
               <div className="head">
-                <h2>TOP RATED MOVIES</h2>
+                <h2>RECENTLY ADDED MOVIES</h2>
               </div>
               {movies.length > 0
-                ? movies.map(movie => <TopRatedMovies key={movie._id} movie={movie} />)
+                ? newMovies.map(movie => <TopRatedMovies key={movie._id} movie={movie} />)
                 : <h3>THERE'S NO MOVIES TO SHOW</h3>
               }
               <div className="cl">&nbsp;</div>

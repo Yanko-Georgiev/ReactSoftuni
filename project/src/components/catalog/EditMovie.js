@@ -12,6 +12,7 @@ export const EditMovie = () => {
     const { movieEdit } = useContext(MovieContext);
     const { movieId } = useParams();
     const navigate = useNavigate();
+    useEffect(()=>{document.getElementById('catalog').classList.add('active')},[])
 
     useEffect(() => {
         movieService.getOne(movieId)

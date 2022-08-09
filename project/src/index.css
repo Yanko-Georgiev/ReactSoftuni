@@ -430,7 +430,9 @@ i {
 	width: 800px;
 	height: 400px;
 	border-radius: 15px;
-	margin: 100px auto;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 50px;
 	padding: 10px;
 }
 .details_card img{
@@ -454,4 +456,44 @@ i {
 }
 .details_card .btn{
 	margin-left: 40px;
+}
+.comments textarea{
+	width: 800px;
+	height: 200px;
+	margin: auto;
+	padding: 10px;
+	margin-top: 30px;
+}
+.comments input[type='submit']{
+	margin-left: 500px;
+	margin-top: 30px;
+}
+.comments label{
+	text-align: center;
+}
+.comments_box{
+	width: 800px;
+	background:#f2a223;
+	border-radius: 15px;
+	padding: 10px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+.comments_box ul{
+	list-style: none;
+	padding: 20px;
+	margin: 20px;
+	margin-top: 0px;
+}
+.comments_box li{
+	color: #fff;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.comments_box h2{
+	font-size: 36px;
+	color: #fff;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin-left: 40px;
+	margin-top: 20px;
 }

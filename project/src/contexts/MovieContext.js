@@ -8,12 +8,14 @@ export const MovieContext = createContext();
 const movieReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_MOVIES':
-            return action.payload.map(x => ({ ...x}));
+            return action.payload.map(x => ({ ...x, comments: []}));
         case 'ADD_MOVIE':
             return [...state, action.payload];
         case 'FETCH_MOVIE_DETAILS':
         case 'EDIT_MOVIE':
             return state.map(x => x._id === action.movieId ? action.payload : x);
+        case 'ADD_COMMENT':
+            return state.map(x => x._id === action.movieId ? { ...x, comments: [...x.comments, action.payload] } : x);
         case 'REMOVE_MOVIE':
             return state.filter(x => x._id !== action.movieId);
         default:
@@ -49,20 +51,14 @@ export const MovieProvider = ({
             payload: movieDetails,
             movieId,
         })
-    
-        // setGames(state => {
-        //     const game = state.find(x => x._id == gameId);
-
-        //     const comments = game.comments || [];
-        //     comments.push(comment)
-
-        //     return [
-        //         ...state.filter(x => x._id !== gameId),
-        //         { ...game, comments },
-        //     ];
-        // });
     };
-
+    const addComment = (movieId, comment) => {
+        dispatch({
+            type: 'ADD_COMMENT',
+            payload: comment,
+            movieId
+        });
+    }
     const movieAdd = (movieData) => {
         dispatch({
             type: 'ADD_MOVIE',
@@ -91,6 +87,7 @@ export const MovieProvider = ({
             movies,
             movieAdd,
             movieEdit,
+            addComment,
             fetchMovieDetails,
             selectMovie,
             movieRemove

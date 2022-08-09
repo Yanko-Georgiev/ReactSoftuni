@@ -9,6 +9,7 @@ import { CatalogItem } from './CatalogItem';
 export const Catalog = () =>{
     const { movies } = useContext(MovieContext)
     useEffect(()=>{document.getElementById('catalog').classList.add('active')},[])
+    
     return(
         <>
         <Header/>
