@@ -6,12 +6,21 @@ import { useContext,useEffect } from 'react';
 
 import { MovieContext } from '../../contexts/MovieContext'
 import { TopRatedMovies } from './TopRatedMovies';
+import { NewsContext } from '../../contexts/NewsContext';
+import { News } from './News';
+import { Link } from 'react-router-dom';
 
 export const Home=()=>{
     const { movies } = useContext(MovieContext)
+    const { news } =useContext(NewsContext)
     useEffect(()=>{document.getElementById('home').classList.add('active')},[])
     let moviesL=movies.length;
     let newMovies=movies.slice(moviesL-3,moviesL)
+    let newsL=news.length;
+    let newNews=news;
+    if (newsL>6) {
+      newNews=news.slice(newsL-6,newsL)
+    }
     return(
     <>
         <Header/>
@@ -30,55 +39,16 @@ export const Home=()=>{
           </div>
           <div className="head">
               <h3>
-                COMING SOON<strong>!</strong>
+                NEWS<strong>!</strong>
               </h3>
             </div>
           <div id="coming">
-            <div className="content">
-              <h4>Disney's A Christmas Carol</h4>
-              <p>
-                "Disney's A Christmas Carol," a multi-sensory thrill ride
-                re-envisioned by Academy Award®-winning filmmaker Robert Zemeckis,
-                captures...
-              </p>
-            </div>
-            <div className="content">
-              <h4>Where the Wild Things Are</h4>
-              <p>
-                Innovative director Spike Jonze collaborates with celebrated author
-                Maurice Sendak to bring one of the most beloved books of all time to
-                the big screen in "Where the Wild Things Are,"...
-              </p>
-            </div>
-            <div className="content">
-              <h4>The Box</h4>
-              <p>
-                Norma and Arthur Lewis are a suburban couple with a young child who
-                receive an anonymous gift bearing fatal and irrevocable consequences.
-              </p>
-            </div>
-            <div className="content">
-              <h4>The Princess and the Frog </h4>
-              <a href="#">
-                <img src="images/coming-soon1.jpg" alt="" />
-              </a>
-              <p>
-                Walt Disney Animation Studios presents the musical "The Princess and
-                the Frog," an animated comedy set in the great city of New Orleans...
-              </p>
-            </div>
-            <div className="cl">&nbsp;</div>
-            <div className="content">
-              <h4>The Princess and the Frog </h4>
-              <a href="#">
-                <img src="images/coming-soon2.jpg" alt="" />
-              </a>
-              <p>
-                Walt Disney Animation Studios presents the musical "The Princess and
-                the Frog," an animated comedy set in the great city of New Orleans...
-              </p>
-            </div>
+            {news.length > 0
+              ? newNews.map(news => <News key={news._id} news={news} />)
+              : <h3>THERE'S NO NEWS TO SHOW</h3>
+            }
           </div>
+          <div className="more_news"><Link to={'/news'}>SEE MORE NEWS</Link></div>
           <div className="cl">&nbsp;</div>
         </div>
         <Footer/>

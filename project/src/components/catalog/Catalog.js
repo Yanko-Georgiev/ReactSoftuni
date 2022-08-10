@@ -13,7 +13,6 @@ export const Catalog = () =>{
     return(
         <>
         <Header/>
-        
             <div id="main">
                 <div id="content">
                     <div className="box">

@@ -14,13 +14,16 @@ export const Header=()=>{
               
                 <Link className='navlink' id='catalog' to="/catalog">IN THEATERS</Link>
               
-                <Link className='navlink' to="/coming">NEWS</Link>
+                <Link className='navlink' id='news' to="/news">NEWS</Link>
               
               {user.email
                     ?
                     <>
                       <Link className='navlink' id='create' to="/create">ADD MOVIE</Link>
-                      <Link className='navlink' id='add' to="/news">ADD NEWS</Link>
+                      {user.email=='admin@abv.bg'
+                        ?<Link className='navlink' id='add' to="/add">ADD NEWS</Link>
+                        :null
+                      }
                       <Link className='navlink' to="/logout">LOGOUT</Link>
                     </> 
                     :

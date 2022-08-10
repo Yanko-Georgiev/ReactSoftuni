@@ -31,12 +31,14 @@ export const MovieDetails = () => {
         const formData = new FormData(e.target);
 
         const comment = formData.get('comment');
-
-        commentService.create(movieId, comment)
+        if (comment!="") {
+            commentService.create(movieId, comment)
             .then(result => {
                 addComment(movieId, comment);
             });
-        e.target.reset();
+            e.target.reset();
+        }
+        
     };
 
     const movieDeleteHandler = () => {
@@ -68,16 +70,15 @@ export const MovieDetails = () => {
         <section className='comments_box'>
             <h2>Reviews:</h2>
             <ul>
-                {currentMovie.comments?.map(x =>
+                {currentMovie.comments
+                ?currentMovie.comments.map(x =>
                     <li key={x} className="comment">
                         <p>{x}</p>
                     </li>
-                )}
+                )
+                :<li><p>No reviews yet.</p></li>
+                }
             </ul>
-
-            {!currentMovie.comments &&
-                <p className="no-comment">No reviews yet.</p>
-            }
         </section>
         {user.email
                 ?

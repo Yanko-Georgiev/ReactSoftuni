@@ -41,12 +41,12 @@ export const EditMovie = () => {
                 <div className="container">
                     <h1>Edit Movie</h1>
                     <label htmlFor="title">Movie title:</label>
-                    <input type="text" id="title" name="title" defaultValue={currentMovie.title} />
+                    <input type="text" id="title" name="title" value={currentMovie.title} />
                     
                     <label htmlFor="img">Image:</label>
-                    <input type="text" id="img" name="img" defaultValue={currentMovie.img} />
+                    <input type="text" id="img" name="img" value={currentMovie.img} />
                     <label htmlFor="description">Movie description:</label>
-                    <textarea name="description" id="description" defaultValue={currentMovie.description} />
+                    <textarea name="description" id="description" value={currentMovie.description} />
                     <input className="btn" type="submit" value="Edit Movie" />
                     <button onClick={(e)=>{e.preventDefault();navigate((`/details/${movieId}`))}} className="btn">Go back</button>
                 </div>
