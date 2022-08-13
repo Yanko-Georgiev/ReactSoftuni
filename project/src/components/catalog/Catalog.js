@@ -21,7 +21,7 @@ export const Catalog = () =>{
                         </div>
                         {movies.length > 0
                             ? movies.map(movie => <CatalogItem key={movie._id} movie={movie} />)
-                            : <h3>THERE'S NO MOVIES TO SHOW</h3>
+                            : <div className='head_catalog'><h3>THERE'S NO MOVIES TO SHOW</h3></div>
                         }
                         <div className="head_catalog">
                             <h2>COME BACK LATER FOR MORE!</h2>

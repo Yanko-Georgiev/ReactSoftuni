@@ -40,12 +40,12 @@ export const EditNews = () => {
                 <div className="container">
                     <h1>Edit News</h1>
                     <label htmlFor="title">News title:</label>
-                    <input type="text" id="title" name="title" value={currentNews.title} />
+                    <input type="text" id="title" name="title" defaultValue={currentNews.title} />
                     
                     <label htmlFor="img">Image:</label>
-                    <input type="text" id="img" name="img" value={currentNews.img} />
+                    <input type="text" id="img" name="img" defaultValue={currentNews.img} />
                     <label htmlFor="description">News text:</label>
-                    <textarea name="description" id="description" value={currentNews.description} />
+                    <textarea name="description" id="description" defaultValue={currentNews.description} />
                     <input className="btn" type="submit" value="Edit News" />
                     <button onClick={(e)=>{e.preventDefault();navigate((`/news`))}} className="btn">Go back</button>
                 </div>

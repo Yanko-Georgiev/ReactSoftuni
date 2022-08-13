@@ -253,9 +253,6 @@ nav .navlink.active, nav .navlink:hover {
 	line-height:16px;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
 }
  .full{
 	width: 490px;

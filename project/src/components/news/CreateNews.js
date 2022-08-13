@@ -19,6 +19,7 @@ export const CreateNews = () => {
         newsService.create(newsData)
             .then(result => {
                 newsAdd(result)
+                navigate('/news')
             });
     };
 

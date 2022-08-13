@@ -12,12 +12,14 @@ export const NewsPage=()=>{
                     <div className="head_news">
                         <h2>NEWS</h2>
                     </div>
-                    <div className="news_box">
                         {news.length > 0
-                            ? news.map(news => <NewsPageItem key={news._id} news={news} />)
-                            : <h3>THERE'S NO NEWS</h3>
+                            ?<>
+                            <div className="news_box head_catalog">
+                                {news.map(news => <NewsPageItem key={news._id} news={news} />)}
+                            </div>
+                            </> 
+                            :<div className="head_catalog"><h2>THERE'S NO NEWS</h2></div> 
                         }
-                    </div>
                     <div className="head_catalog">
                         <h2>COME BACK LATER FOR MORE!</h2>
                    
